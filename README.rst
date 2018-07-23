@@ -63,9 +63,9 @@ requires pytest>=3.5.0
 Installation
 ------------
 
-You can install "pytest-testconfig" via `pip`_ from `PyPI`_::
+You can install "pytests-testconfig" via `pip`_ from `PyPI`_::
 
-    $ python3 -m pip install --index-url https://test.pypi.org/simple/ pytest-testconfig
+    $ python3 -m pip install --index-url https://test.pypi.org/simple/ pytests-testconfig
 
 
 Usage
