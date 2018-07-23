@@ -12,11 +12,11 @@ def read(fname):
 
 
 setup(
-    name='pytests-testconfig',
+    name='pytest-testconfig',
     version='0.1.0',
-    author='Wojciech Olejarz, Bartłomiej Skrobek',
+    author='Wojciech Olejarz, Bartlomiej Skrobek',
     author_email='olejarz.wojciech@gmail.com',
-    maintainer='Wojciech Olejarz, Bartłomiej Skrobek',
+    maintainer='Wojciech Olejarz, Bartlomiej Skrobek',
     maintainer_email='olejarz.wojciech@gmail.com',
     license='Apache Software License 2.0',
     url='https://github.com/wojole/pytest-testconfig',
