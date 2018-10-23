@@ -86,7 +86,7 @@ def load_ini(ini_file, encoding):
     global config
     tmpconfig = ConfigParser.ConfigParser()
     with codecs.open(ini_file, 'r', encoding) as f:
-        tmpconfig.readfp(f)
+        tmpconfig.read_file(f)
 
     parsed_config = {}
     for section in tmpconfig.sections():
