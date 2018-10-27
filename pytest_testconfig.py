@@ -85,6 +85,8 @@ def load_ini(ini_file, encoding):
 
     global config
     tmpconfig = ConfigParser.ConfigParser()
+    # Overriding optionxform method to avoid lowercase conversion
+    tmpconfig.optionxform = lambda override: override
     with codecs.open(ini_file, 'r', encoding) as f:
         tmpconfig.read_file(f)
 
