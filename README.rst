@@ -73,7 +73,7 @@ Usage
 
 Tests can import the "config" singleton from testconfig::
 
-    from testconfig import config
+    from pytest_testconfig import config
 
 By default, YAML files parse into a nested dictionary, and ConfigParser ini
 files are also collapsed into a nested dictionary for foo[bar][baz] style
