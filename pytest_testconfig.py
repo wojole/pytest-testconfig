@@ -87,7 +87,11 @@ def load_ini(ini_file, encoding):
     tmpconfig = ConfigParser.ConfigParser()
     # Overriding optionxform method to avoid lowercase conversion
     tmpconfig.optionxform = lambda override: override
-    tmpconfig.read(os.path.expanduser(ini_file), encoding=encoding)
+    with codecs.open(os.path.expanduser(ini_file), 'r', encoding) as f:
+        try:
+            tmpconfig.read_file(f)
+        except AttributeError:
+            tmpconfig.readfp(f)
 
     parsed_config = {}
     for section in tmpconfig.sections():
