@@ -14,9 +14,6 @@ pytest-testconfig
     :target: https://travis-ci.org/wojole/pytest-testconfig
     :alt: See Build Status on Travis CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/wojole/pytest-testconfig?branch=master
-    :target: https://ci.appveyor.com/project/wojole/pytest-testconfig/branch/master
-    :alt: See Build Status on AppVeyor
 
 Test configuration plugin for pytest.
 
