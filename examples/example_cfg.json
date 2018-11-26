@@ -1,0 +1,8 @@
+{
+    "myapp": {
+                 "servers": {
+                                "main_server": "10.1.1.1",
+                                "secondary_server": "10.1.1.2"
+                            }
+             }
+}
