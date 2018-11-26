@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-testconfig',
-    version='0.1.0',
+    version='0.1.1',
     author='Wojciech Olejarz, Bartlomiej Skrobek',
     author_email='olejarz.wojciech@gmail.com',
     maintainer='Wojciech Olejarz, Bartlomiej Skrobek',
