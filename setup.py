@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-testconfig',
-    version='0.1.1',
+    version='0.1.2',
     author='Wojciech Olejarz, Bartlomiej Skrobek',
     author_email='olejarz.wojciech@gmail.com',
     maintainer='Wojciech Olejarz, Bartlomiej Skrobek',
@@ -24,7 +24,7 @@ setup(
     long_description=read('README.rst'),
     py_modules=['pytest_testconfig'],
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*',
-    install_requires=['pytest>=3.5.0'],
+    install_requires=['pytest>=3.5.0', 'pyyaml'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Pytest',

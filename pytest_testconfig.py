@@ -76,7 +76,7 @@ def load_yaml(yaml_file, encoding):
     except (ImportError):
         raise Exception('unable to import YAML package. Can not continue.')
     global config
-    parsed_config = yaml.load(codecs.open(os.path.expanduser(yaml_file), 'r', encoding).read())
+    parsed_config = yaml.safe_load(codecs.open(os.path.expanduser(yaml_file), 'r', encoding).read())
     merge_map(config, parsed_config)
 
 
@@ -190,7 +190,7 @@ def pytest_configure(config):
     for override in overrides:
         keys, val = override.split(":", 1)
         if config.getoption('exact'):
-            config[keys] = val
+            py_config[keys] = val
         else:
             # Create all *parent* keys that may not exist in the config
             section = py_config

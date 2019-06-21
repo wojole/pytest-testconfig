@@ -77,7 +77,7 @@ files are also collapsed into a nested dictionary for foo[bar][baz] style
 access. Tests can obviously access configuration data by referencing the
 relevant dictionary keys::
 
-    from testconfig import config
+    from pytest_testconfig import config
     def test_foo():
         target_server_ip = config['servers']['webapp_ip']
 
