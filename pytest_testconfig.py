@@ -36,6 +36,7 @@ warning = "Cannot access the test config because the plugin has not \
 been activated.  Did you specify --tc or any other command line option?"
 
 config = {}
+py_config = {}
 
 
 def tolist(val):
@@ -169,6 +170,7 @@ def pytest_addoption(parser, env=os.environ):
 def pytest_configure(config):
     """ Call the super and then validate and call the relevant parser for
     the configuration file passed in """
+    global py_config
     if not config.getoption('testconfig') and not config.getoption('overrides'):
         return
 
@@ -191,7 +193,7 @@ def pytest_configure(config):
             config[keys] = val
         else:
             # Create all *parent* keys that may not exist in the config
-            section = config
+            section = py_config
             keys = keys.split('.')
             for key in keys[:-1]:
                 if key not in section:
@@ -202,6 +204,8 @@ def pytest_configure(config):
             key = keys[-1]
             section[key] = val
 
+
+config = py_config
 
 # Use an environment hack to allow people to set a config file to auto-load
 # in case they want to put tests they write through pychecker or any other
