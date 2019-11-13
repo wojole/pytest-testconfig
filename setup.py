@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-testconfig',
-    version='0.1.2',
+    version='0.1.3',
     author='Wojciech Olejarz, Bartlomiej Skrobek',
     author_email='olejarz.wojciech@gmail.com',
     maintainer='Wojciech Olejarz, Bartlomiej Skrobek',
@@ -36,6 +36,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Operating System :: OS Independent',
         'License :: OSI Approved :: Apache Software License',
