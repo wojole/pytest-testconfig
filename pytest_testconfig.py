@@ -76,8 +76,9 @@ def load_yaml(yaml_file, encoding):
     except (ImportError):
         raise Exception('unable to import YAML package. Can not continue.')
     global config
-    parsed_config = yaml.safe_load(codecs.open(os.path.expanduser(yaml_file), 'r', encoding).read())
-    merge_map(config, parsed_config)
+    with codecs.open(os.path.expanduser(yaml_file), 'r', encoding) as f:
+        parsed_config = yaml.safe_load(f.read())
+        merge_map(config, parsed_config)
 
 
 def load_ini(ini_file, encoding):
@@ -106,7 +107,8 @@ def load_python(py_file, encoding):
     """ This will exec the defined python file into the config variable -
     the implicit assumption is that the python is safe, well formed and will
     not do anything bad. This is also dangerous. """
-    exec(codecs.open(os.path.expanduser(py_file), 'r', encoding).read())
+    with codecs.open(os.path.expanduser(py_file), 'r', encoding) as f:
+        exec(f.read())
 
 
 def load_json(json_file, encoding):
@@ -114,9 +116,9 @@ def load_json(json_file, encoding):
     """
     import json
     global config
-    with codecs.open(os.path.expanduser(json_file), 'r', encoding=encoding) as handle:
-        parsed_config = json.load(handle)
-    merge_map(config, parsed_config)
+    with codecs.open(os.path.expanduser(json_file), 'r', encoding) as f:
+        parsed_config = json.load(f)
+        merge_map(config, parsed_config)
 
 
 enabled_option = False
