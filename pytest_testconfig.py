@@ -169,7 +169,7 @@ def pytest_addoption(parser, env=os.environ):
     parser.addini("github", "GitHub issue integration", "args")
 
 
-def pytest_configure(config):
+def pytest_cmdline_main(config):
     """ Call the super and then validate and call the relevant parser for
     the configuration file passed in """
     global py_config
